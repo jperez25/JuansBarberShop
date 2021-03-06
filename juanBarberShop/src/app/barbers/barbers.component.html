@@ -1,0 +1,28 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+    <div class="body">
+        <div *ngIf="isSelected"  class="card-group" >
+            <div class="card mb-3">
+                <img class="card-img-top" src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" alt="Card image cap"/>
+                <div class="card-body">
+                    <h5 class="card-title">{{selected_Barber.name}}</h5>
+                    <p class="card-text">{{selected_Barber.description}}</p> 
+                </div>
+              </div> 
+        </div>
+
+        <div class="card-group">
+            <div *ngFor="let barber of barbers; index as i" >
+                <div (click)="set_selected_barber(barber)" class="card" style="width: 19rem; padding: 2em;">
+                    <img class="card-img-top" src="https://mdbootstrap.com/img/new/standard/nature/111.jpg" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">{{barber.name}}</h5>
+                      <p class="card-text">{{barber.description}}</p>
+                    </div>
+                </div>
+                <br *ngIf="i > 4"><br/>
+            </div>
+        </div>
+    </div>
+    <app-footer></app-footer>
+</div>

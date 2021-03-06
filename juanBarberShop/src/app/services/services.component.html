@@ -1,0 +1,28 @@
+<div class="container" style="min-height: 600px;">
+    <app-nav-bar></app-nav-bar>
+    <div class="body" style="background-image: url('../../assets/pictures/jb_logo.png');">
+        <div class="row">
+            <div  class="col-md-4 offset-md-4" style="text-align: center;">
+                <h1>Services</h1>
+            </div>
+            <hr/>
+        </div>
+        <div *ngFor="let service of services" class="row">
+            <div class="col-md-4 offset-md-1" style="background-color:#f0ead6;">
+                <h2 style="font-family: cursive;"> {{service.name}} - ${{service.price}}</h2>
+                <br/>
+                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                    {{service.description}}
+                </p>
+            </div>
+            <div class="col-md-4 offset-md-2"  style="background-color: #f0ead6;">
+                <h2 style="font-family: cursive;"> {{service.name}} - ${{service.price}}</h2>
+                <br/>
+                <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+                    {{service.description}}
+                </p>
+            </div>
+          </div>
+    </div>
+    <app-footer></app-footer>
+</div>
